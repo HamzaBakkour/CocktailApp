@@ -1,5 +1,5 @@
 import type { LoaderFunctionArgs } from "react-router-dom";
-import type { ICocktail } from "../utils/mapRawCocktailData";
+import type { ICocktail } from "../utils/types";
 import { mapRawCocktailData } from "../utils/mapRawCocktailData";
 import type { RawDrink } from "../utils/types";
 

@@ -3,12 +3,10 @@ import {
   useLoaderData,
   Link,
   useLocation,
-  useNavigate,
 } from "react-router-dom";
 import type { ICocktail } from "../utils/types";
 import "../css/CocktailInfoPage.css";
 
-// shape of the navigation state we pass from CocktailCard
 type FromState = {
   from?: {
     pathname: string;
@@ -19,9 +17,7 @@ type FromState = {
 const CocktailInfoPage: React.FC = () => {
   const cocktail = useLoaderData() as ICocktail;
   const location = useLocation();
-  const navigate = useNavigate();
 
-  // Build a safe back target from state; fallback to "/"
   const state = (location.state as FromState) || {};
   const backHref = state.from
     ? `${state.from.pathname}${state.from.search || ""}`
@@ -29,10 +25,7 @@ const CocktailInfoPage: React.FC = () => {
 
   return (
     <div className="info-page">
-      {/* Prefer a button that goes back in history to preserve scroll position.
-          If no history, fall back to the computed href. */}
-      <div style={{ marginBottom: 12, display: "flex", gap: 8 }}>
-
+      <div>
         <Link to={backHref} className="back alt">
           Back to results
         </Link>
