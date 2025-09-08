@@ -1,0 +1,27 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  background-image: url("../assets/cocktail.png"); 
+  background-repeat: repeat;
+  background-size: 264px 164px;
+  animation: moveCocktailBg 30s linear infinite;
+  color: #e7edf3;
+}
+
+@keyframes moveCocktailBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}

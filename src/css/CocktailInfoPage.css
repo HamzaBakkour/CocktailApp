@@ -1,0 +1,25 @@
+/* Info page */
+.info-page {
+  max-width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+  background: #8aa3c0;
+;
+  color: black;
+}
+.info-page h1 {
+  margin-top: 0;
+}
+.info-page .info-thumb {
+  max-width: 300px;
+  border-radius: 12px;
+  display: block;
+  margin: 16px 0;
+}
+.info-page .back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2a6df4;
+  font-size: 20px;
+}

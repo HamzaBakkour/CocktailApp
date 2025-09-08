@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+  padding: 12px;
+
+}
+.thumb {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #919191;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* See more button */
+.see-more {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: wheat;
+  color: black;
+  text-decoration: none;
+}
+.see-more:hover {
+  background: #85a1dd;
+}
