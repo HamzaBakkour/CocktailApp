@@ -43,7 +43,6 @@ const Home: React.FC = () => {
       <section className="panel">
         <div className="top">
           <h2>Random Cocktail</h2>
-
           <div>
             <button
               type="button"
