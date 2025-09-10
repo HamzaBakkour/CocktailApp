@@ -3,6 +3,7 @@ import {
   Form,
   useLoaderData,
   useSearchParams,
+  useNavigate, 
   Link,
 } from "react-router-dom";
 import CocktailCard from "../components/CocktailCard";
@@ -19,11 +20,20 @@ const Home: React.FC = () => {
     searchResults: ICocktail[];
   };
 
-
+  const navigate = useNavigate(); 
+  const [params] = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Reset to page 1 when the query string changes
-  const [params] = useSearchParams();
+  React.useEffect(() => {
+    const hasRid = !!params.get("rid");
+    if (randomCocktail?.id && !hasRid) {
+      const next = new URLSearchParams(params);
+      next.set("rid", randomCocktail.id);
+      navigate({ search: `?${next.toString()}` }, { replace: true });
+    }
+  
+  }, [randomCocktail?.id]); 
+
   React.useEffect(() => {
     setCurrentPage(1);
   }, [params.toString()]);
@@ -33,7 +43,6 @@ const Home: React.FC = () => {
     const start = (currentPage - 1) * PAGE_SIZE;
     return (searchResults || []).slice(start, start + PAGE_SIZE);
   }, [searchResults, currentPage]);
-
 
   return (
     <main className="main-content">

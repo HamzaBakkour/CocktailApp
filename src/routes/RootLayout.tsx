@@ -10,16 +10,9 @@ const RootLayout: React.FC = () => {
       <header>
         <h1>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-          <h1>
-            Cocktails
-          </h1>
+            <h1>Cocktails</h1>
           </Link>
         </h1>
-        <div className="actions">
-          <Link to="/" className="see-more">
-            Home
-          </Link>
-        </div>
       </header>
 
       {isLoading && <p style={{ opacity: 0.7 }}>Loading…</p>}

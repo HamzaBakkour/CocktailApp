@@ -28,6 +28,7 @@ header {
 h1 {
   margin: 0;
   font-size: 40px;
+  color: rgb(146, 199, 96);
 }
 
 h2 {
@@ -44,6 +45,8 @@ button {
   cursor: pointer;
   background: wheat;
   color: black;
+  font-family: "Chewy", system-ui;
+  font-size: 20px;
 }
 
 .actions {
