@@ -10,7 +10,9 @@ const RootLayout: React.FC = () => {
       <header>
         <h1>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <h1>
             Cocktails
+          </h1>
           </Link>
         </h1>
         <div className="actions">

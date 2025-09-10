@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding: 24px;
   box-shadow: 0 0px 40px rgba(0, 0, 0, 0.493);
+  font-family: "Chewy", system-ui;
 }
 
 header {
@@ -24,13 +25,17 @@ header {
   margin-bottom: 16px;
 }
 
-
 h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 40px;
 }
 
-
+h2 {
+  margin: 0;
+  font-size: 28px;
+  padding-bottom: 10px;
+  font-weight: 100;
+}
 
 button {
   padding: 8px 12px;
@@ -46,8 +51,6 @@ button {
   justify-content: space-between;
   align-items: baseline;
 }
-
-
 
 .actions button:hover,
 .search button:hover {
@@ -79,16 +82,17 @@ button {
   gap: 16px;
   align-items: stretch;
   flex-wrap: wrap;
+  font-size: 20px;
 }
-.main-content  > .panel {
+.main-content > .panel {
   flex: 1 1 480px;
   min-width: 0; /* prevent overflow */
 }
 @media (max-width: 900px) {
-  .main-content  {
+  .main-content {
     flex-direction: column;
   }
-  .main-content  > .panel {
+  .main-content > .panel {
     flex-basis: 100%;
   }
 }
@@ -99,10 +103,10 @@ button {
   border-radius: 16px;
   padding: 16px;
 }
-.panel h2 {
+/* .panel h2 {
   margin-top: 0;
   font-size: 20px;
-}
+} */
 
 .list {
   display: flex;

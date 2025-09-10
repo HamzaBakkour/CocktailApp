@@ -3,8 +3,7 @@ import {
   Form,
   useLoaderData,
   useSearchParams,
-  useRevalidator,
-  Link
+  Link,
 } from "react-router-dom";
 import CocktailCard from "../components/CocktailCard";
 import Pagination from "../components/Pagination";
@@ -20,8 +19,6 @@ const Home: React.FC = () => {
     searchResults: ICocktail[];
   };
 
-  // Revalidate the current route's loader without changing the URL
-  const revalidator = useRevalidator();
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -37,7 +34,6 @@ const Home: React.FC = () => {
     return (searchResults || []).slice(start, start + PAGE_SIZE);
   }, [searchResults, currentPage]);
 
-  const refreshing = revalidator.state === "loading";
 
   return (
     <main className="main-content">
