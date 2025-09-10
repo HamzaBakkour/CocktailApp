@@ -87,9 +87,14 @@ button {
   flex-wrap: wrap;
   font-size: 20px;
 }
-.main-content > .panel {
+.main-content > .left-panel {
   flex: 1 1 480px;
-  min-width: 0; /* prevent overflow */
+  min-width: 0; 
+}
+
+.main-content > .right-panel {
+  flex: 1 1 480px;
+  min-width: 0; 
 }
 @media (max-width: 900px) {
   .main-content {
@@ -100,16 +105,20 @@ button {
   }
 }
 
-.panel {
+.left-panel {
+  background: #8aa3c0;
+  border: 1px solid #93a3b8;
+  border-radius: 16px;
+  padding: 16px;
+  height: 450px;
+}
+
+.right-panel {
   background: #8aa3c0;
   border: 1px solid #93a3b8;
   border-radius: 16px;
   padding: 16px;
 }
-/* .panel h2 {
-  margin-top: 0;
-  font-size: 20px;
-} */
 
 .list {
   display: flex;

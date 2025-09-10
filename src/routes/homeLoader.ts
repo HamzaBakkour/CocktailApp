@@ -1,4 +1,3 @@
-// src/routes/homeLoader.ts
 import type { LoaderFunctionArgs } from "react-router-dom";
 import type { ICocktail, RawDrink } from "../utils/types";
 import { mapRawCocktailData } from "../utils/mapRawCocktailData";

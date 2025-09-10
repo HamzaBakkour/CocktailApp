@@ -21,7 +21,7 @@ const CocktailCard: React.FC<Props> = ({ cocktail }) => {
           state={{ from: { pathname: loc.pathname, search: loc.search } }}
           className="see-more"
         >
-          See more →
+          See more
         </Link>
       </div>
     </div>

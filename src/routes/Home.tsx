@@ -46,7 +46,7 @@ const Home: React.FC = () => {
 
   return (
     <main className="main-content">
-      <section className="panel">
+      <section className="left-panel">
         <div className="top">
           <h2>Random Cocktail</h2>
           <div>
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         )}
       </section>
 
-      <section className="panel">
+      <section className="right-panel">
         <h2>Search</h2>
         <Form method="get" className="search">
           <div style={{ display: "flex", gap: 8 }}>
