@@ -1,27 +1,33 @@
+:root {
+  --tile-x: 264px;
+  --tile-y: 164px;
+  --period: 20s;
+}
+
 html,
 body,
 #root {
   height: 100%;
 }
-
 #root {
   background: transparent;
 }
 
 body {
   margin: 0;
-  background-image: url("../assets/cocktail.png"); 
+  background-image: url("../assets/cocktail.png");
   background-repeat: repeat;
-  background-size: 264px 164px;
-  animation: moveCocktailBg 30s linear infinite;
+  background-size: var(--tile-x) var(--tile-y);
+  animation: moveCocktailBg var(--period) linear infinite;
+  will-change: background-position;
   color: #e7edf3;
 }
 
 @keyframes moveCocktailBg {
-  0% {
+  from {
     background-position: 0 0;
   }
-  100% {
-    background-position: 500px 500px;
+  to {
+    background-position: var(--tile-x) var(--tile-y);
   }
 }
