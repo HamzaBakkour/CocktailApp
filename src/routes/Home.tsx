@@ -4,6 +4,7 @@ import {
   useLoaderData,
   useSearchParams,
   useRevalidator,
+  Link
 } from "react-router-dom";
 import CocktailCard from "../components/CocktailCard";
 import Pagination from "../components/Pagination";
@@ -44,15 +45,13 @@ const Home: React.FC = () => {
         <div className="top">
           <h2>Random Cocktail</h2>
           <div>
-            <button
-              type="button"
+            <Link
+              to={q ? `/?q=${encodeURIComponent(q)}` : "/"}
               className="see-more"
-              onClick={() => revalidator.revalidate()}
-              disabled={refreshing}
               title="Get another random"
             >
-              {refreshing ? "Refreshing…" : "Another Random"}
-            </button>
+              Another Random
+            </Link>
           </div>
         </div>
 
@@ -74,6 +73,9 @@ const Home: React.FC = () => {
               placeholder="Search cocktail by name… (e.g., margarita)"
               aria-label="Search cocktails"
             />
+            {randomCocktail?.id && (
+              <input type="hidden" name="rid" value={randomCocktail.id} />
+            )}
             <button type="submit">Search</button>
           </div>
         </Form>

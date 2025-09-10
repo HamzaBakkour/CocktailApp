@@ -3,6 +3,7 @@ import {
   useLoaderData,
   Link,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 import type { ICocktail } from "../utils/types";
 import "../css/CocktailInfoPage.css";
@@ -17,6 +18,7 @@ type FromState = {
 const CocktailInfoPage: React.FC = () => {
   const cocktail = useLoaderData() as ICocktail;
   const location = useLocation();
+  const navigate = useNavigate();
 
   const state = (location.state as FromState) || {};
   const backHref = state.from
@@ -26,9 +28,13 @@ const CocktailInfoPage: React.FC = () => {
   return (
     <div className="info-page">
       <div>
-        <Link to={backHref} className="back alt">
-          Back to results
-        </Link>
+        <button
+          onClick={() =>
+            window.history.length > 1 ? navigate(-1) : navigate(backHref)
+          }
+        >
+          ← Back
+        </button>
       </div>
 
       <h1>{cocktail.name}</h1>
